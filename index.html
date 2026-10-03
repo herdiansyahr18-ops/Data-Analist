@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herdiansyah Ramadhan | Market Analyst</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://unpkg.com/lightweight-charts@5.0.8/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">HR</div>
+
+            <div>
+                <h2>MarketLens</h2>
+                <span>Analytics Platform</span>
+            </div>
+        </div>
+
+        <!-- ANALYST PROFILE -->
+        <div class="analyst-card">
+
+            <div class="avatar">
+                HR
+            </div>
+
+            <div class="analyst-info">
+                <span class="profile-label">MARKET ANALYST</span>
+                <h3>Herdiansyah Ramadhan</h3>
+                <p>Technical & Ethereum Research</p>
+            </div>
+
+            <div class="online-status">
+                <span></span>
+                Active
+            </div>
+
+        </div>
+
+        <nav class="navigation">
+
+            <p class="nav-title">WORKSPACE</p>
+
+            <a href="#dashboard" class="nav-item active">
+                <span>▦</span>
+                Dashboard
+            </a>
+
+            <a href="#chart-section" class="nav-item">
+                <span>◈</span>
+                Market Chart
+            </a>
+
+            <a href="#technical" class="nav-item">
+                <span>◌</span>
+                Technical Analysis
+            </a>
+
+            <p class="nav-title">RESEARCH</p>
+
+            <a href="#ethereum" class="nav-item">
+                <span>Ξ</span>
+                Ethereum
+            </a>
+
+            <a href="#roadmap" class="nav-item">
+                <span>⌘</span>
+                Developer Roadmap
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+
+            <div class="secure-box">
+                <div class="secure-icon">✓</div>
+
+                <div>
+                    <strong>Research Mode</strong>
+                    <p>Educational dashboard</p>
+                </div>
+            </div>
+
+            <p class="copyright">
+                © 2026 Herdiansyah Ramadhan
+            </p>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+
+                <div class="breadcrumb">
+                    MARKET ANALYTICS / DASHBOARD
+                </div>
+
+                <h1>Market Intelligence</h1>
+
+                <p class="subtitle">
+                    Technical market analysis & Ethereum developer research
+                </p>
+
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="analyst-badge">
+
+                    <div class="mini-avatar">
+                        HR
+                    </div>
+
+                    <div>
+                        <span>Market Analyst</span>
+                        <strong>Herdiansyah Ramadhan</strong>
+                    </div>
+
+                </div>
+
+                <button id="themeButton" class="icon-button">
+                    ☾
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">MARKET OVERVIEW</span>
+                    <h2>Market Dashboard</h2>
+                </div>
+
+                <div class="market-status">
+                    <span></span>
+                    SIMULATION DATA
+                </div>
+
+            </div>
+
+
+            <!-- ASSET SELECTOR -->
+            <div class="asset-selector">
+
+                <button class="asset-button active" data-asset="ETH">
+                    <span class="coin-icon eth">Ξ</span>
+                    <div>
+                        <strong>Ethereum</strong>
+                        <small>ETH / USD</small>
+                    </div>
+                </button>
+
+                <button class="asset-button" data-asset="BTC">
+                    <span class="coin-icon btc">₿</span>
+                    <div>
+                        <strong>Bitcoin</strong>
+                        <small>BTC / USD</small>
+                    </div>
+                </button>
+
+                <button class="asset-button" data-asset="STOCK">
+                    <span class="coin-icon stock">S</span>
+                    <div>
+                        <strong>Stock Demo</strong>
+                        <small>STOCK / IDR</small>
+                    </div>
+                </button>
+
+            </div>
+
+
+            <!-- KPI GRID -->
+            <div class="kpi-grid">
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>Current Price</span>
+                        <span class="kpi-icon">◈</span>
+                    </div>
+
+                    <h3 id="currentPrice">$3,420.00</h3>
+
+                    <div class="change positive">
+                        +2.84%
+                    </div>
+
+                    <p>Simulated market value</p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>Support Zone</span>
+                        <span class="kpi-icon green">↓</span>
+                    </div>
+
+                    <h3 id="supportValue">$3,200</h3>
+
+                    <div class="zone-label support">
+                        SUPPORT
+                    </div>
+
+                    <p>Historical simulation level</p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>Resistance Zone</span>
+                        <span class="kpi-icon red">↑</span>
+                    </div>
+
+                    <h3 id="resistanceValue">$3,500</h3>
+
+                    <div class="zone-label resistance">
+                        RESISTANCE
+                    </div>
+
+                    <p>Historical simulation level</p>
+
+                </div>
+
+
+                <div class="kpi-card">
+
+                    <div class="kpi-top">
+                        <span>RSI 14</span>
+                        <span class="kpi-icon">◉</span>
+                    </div>
+
+                    <h3 id="rsiValue">58.4</h3>
+
+                    <div class="rsi-meter">
+                        <span id="rsiBar"></span>
+                    </div>
+
+                    <p>Momentum indicator</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHART -->
+        <section id="chart-section" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">TECHNICAL CHART</span>
+                    <h2>Price Structure</h2>
+                </div>
+
+                <div class="chart-tools">
+
+                    <button class="time-button active">1D</button>
+                    <button class="time-button">1W</button>
+                    <button class="time-button">1M</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <div class="chart-header">
+
+                    <div>
+
+                        <div class="chart-title">
+                            <span id="chartAsset">ETH / USD</span>
+
+                            <span class="live-dot"></span>
+                            MARKET SIMULATION
+                        </div>
+
+                        <div class="chart-price">
+                            <span id="chartPrice">$3,420.00</span>
+                            <span class="positive">+2.84%</span>
+                        </div>
+
+                    </div>
+
+                    <div class="analyst-signature">
+
+                        <span>ANALYSIS BY</span>
+                        <strong>Herdiansyah Ramadhan</strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-wrapper">
+
+                    <div id="chart"></div>
+
+                    <!-- CHART ANNOTATIONS -->
+
+                    <div class="chart-annotation resistance-note">
+
+                        <div class="annotation-dot red"></div>
+
+                        <div>
+                            <strong>Resistance Zone</strong>
+                            <span>Price rejection area</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="chart-annotation support-note">
+
+                        <div class="annotation-dot green"></div>
+
+                        <div>
+                            <strong>Support Zone</strong>
+                            <span>Price reaction area</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="chart-legend">
+
+                    <div>
+                        <span class="legend-line resistance-line"></span>
+                        Resistance
+                    </div>
+
+                    <div>
+                        <span class="legend-line support-line"></span>
+                        Support
+                    </div>
+
+                    <div>
+                        <span class="legend-candle"></span>
+                        Candlestick
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TECHNICAL ANALYSIS -->
+        <section id="technical" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">TECHNICAL RESEARCH</span>
+                    <h2>Analyst Dashboard</h2>
+                </div>
+
+            </div>
+
+
+            <div class="analysis-grid">
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+                        <div class="analysis-icon green-bg">↗</div>
+
+                        <div>
+                            <span>SUPPORT ANALYSIS</span>
+                            <h3>Support Structure</h3>
+                        </div>
+                    </div>
+
+                    <div class="analysis-value" id="supportAnalysis">
+                        $3,200
+                    </div>
+
+                    <p>
+                        Area where simulated price data shows
+                        historical reaction and potential demand.
+                    </p>
+
+                    <div class="analysis-tag support-tag">
+                        SUPPORT ZONE
+                    </div>
+
+                </div>
+
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+                        <div class="analysis-icon red-bg">↘</div>
+
+                        <div>
+                            <span>RESISTANCE ANALYSIS</span>
+                            <h3>Resistance Structure</h3>
+                        </div>
+                    </div>
+
+                    <div class="analysis-value" id="resistanceAnalysis">
+                        $3,500
+                    </div>
+
+                    <p>
+                        Area where simulated price data shows
+                        historical rejection or selling pressure.
+                    </p>
+
+                    <div class="analysis-tag resistance-tag">
+                        RESISTANCE ZONE
+                    </div>
+
+                </div>
+
+
+                <div class="analysis-card">
+
+                    <div class="analysis-card-header">
+                        <div class="analysis-icon blue-bg">◉</div>
+
+                        <div>
+                            <span>MOMENTUM</span>
+                            <h3>RSI Indicator</h3>
+                        </div>
+                    </div>
+
+                    <div class="analysis-value" id="rsiAnalysis">
+                        58.4
+                    </div>
+
+                    <p>
+                        RSI is displayed as an educational momentum
+                        indicator using simulated market data.
+                    </p>
+
+                    <div class="analysis-tag neutral-tag">
+                        MOMENTUM
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ETHEREUM -->
+        <section id="ethereum" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">BLOCKCHAIN RESEARCH</span>
+                    <h2>Ethereum Fundamentals</h2>
+                </div>
+
+            </div>
+
+
+            <div class="ethereum-grid">
+
+                <div class="ethereum-main">
+
+                    <div class="ethereum-logo">
+                        Ξ
+                    </div>
+
+                    <div>
+
+                        <span>BLOCKCHAIN PLATFORM</span>
+
+                        <h2>Ethereum</h2>
+
+                        <p>
+                            Platform blockchain yang mendukung smart contract,
+                            decentralized applications, dan pengembangan Web3.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="fundamental-card">
+
+                    <span class="fundamental-number">01</span>
+                    <h3>EVM</h3>
+                    <p>
+                        Ethereum Virtual Machine menjalankan smart contract
+                        secara deterministik pada jaringan Ethereum.
+                    </p>
+                </div>
+
+
+                <div class="fundamental-card">
+
+                    <span class="fundamental-number">02</span>
+                    <h3>Smart Contract</h3>
+                    <p>
+                        Program blockchain yang berisi fungsi dan state
+                        yang dapat dieksekusi melalui transaksi.
+                    </p>
+                </div>
+
+
+                <div class="fundamental-card">
+
+                    <span class="fundamental-number">03</span>
+                    <h3>Gas</h3>
+                    <p>
+                        Unit yang digunakan untuk mengukur kebutuhan
+                        komputasi sebuah transaksi atau operasi.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ROADMAP -->
+        <section id="roadmap" class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">DEVELOPER RESEARCH</span>
+                    <h2>Ethereum Developer Roadmap</h2>
+                </div>
+
+            </div>
+
+
+            <div class="roadmap">
+
+                <div class="roadmap-line"></div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">01</div>
+
+                    <div class="roadmap-content">
+                        <span>FOUNDATION</span>
+                        <h3>Blockchain Fundamentals</h3>
+                        <p>
+                            Pelajari blockchain, wallet, transaction,
+                            block, gas, dan jaringan Ethereum.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">02</div>
+
+                    <div class="roadmap-content">
+                        <span>PROGRAMMING</span>
+                        <h3>Solidity</h3>
+                        <p>
+                            Pelajari syntax Solidity, variables,
+                            functions, modifiers, events, dan errors.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">03</div>
+
+                    <div class="roadmap-content">
+                        <span>SMART CONTRACT</span>
+                        <h3>Contract Development</h3>
+                        <p>
+                            Membuat, compile, test, dan deploy
+                            smart contract menggunakan Remix.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">04</div>
+
+                    <div class="roadmap-content">
+                        <span>WEB3</span>
+                        <h3>DApp Development</h3>
+                        <p>
+                            Menghubungkan frontend dengan blockchain
+                            menggunakan library JavaScript Web3.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="roadmap-item">
+
+                    <div class="roadmap-number">05</div>
+
+                    <div class="roadmap-content">
+                        <span>SECURITY</span>
+                        <h3>Smart Contract Security</h3>
+                        <p>
+                            Memahami access control, reentrancy,
+                            validation, testing, dan secure development.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SOLIDITY -->
+        <section class="content-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">DEVELOPER LAB</span>
+                    <h2>Solidity Example</h2>
+                </div>
+
+                <button id="copyCode" class="copy-button">
+                    Copy Code
+                </button>
+
+            </div>
+
+
+            <div class="code-card">
+
+<pre><code id="solidityCode">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HerdiansyahVault {
+
+    address public owner;
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    function getOwner()
+        public
+        view
+        returns (address)
+    {
+        return owner;
+    }
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div>
+
+                <strong>MarketLens</strong>
+
+                <p>
+                    Professional educational market analytics dashboard.
+                </p>
+
+            </div>
+
+            <div class="footer-analyst">
+
+                <span>MARKET ANALYST</span>
+                <strong>Herdiansyah Ramadhan</strong>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
